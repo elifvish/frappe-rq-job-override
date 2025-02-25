@@ -129,9 +129,9 @@ app_license = "agpl-3.0"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "RQ Job": "frappe_rq_job_override.frappe_rq_job_override.doctype.rq_job_customizer.rq_job_customizer.RQjobOverride"
+}
 
 # Document Events
 # ---------------
