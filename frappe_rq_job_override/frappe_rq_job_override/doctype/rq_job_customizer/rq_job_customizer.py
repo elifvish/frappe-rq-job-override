@@ -16,7 +16,8 @@ class RQJobCustomizer(Document):
 
 class RQjobOverride(RQJob):
 	custom_queues = frappe.get_site_config().get("workers")
-	QUEUES.extend(list(custom_queues.keys()))
+	if custom_queues is not None:
+		QUEUES.extend(list(custom_queues.keys()))
 	
 
 @frappe.whitelist()
